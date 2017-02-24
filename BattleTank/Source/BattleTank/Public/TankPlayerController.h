@@ -36,5 +36,5 @@ private:
 	UPROPERTY(EditAnywhere)
 	float CrosshairYLocation = 0.45;
 
-	FVector2D ScreenLocation() const;
+	bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
 };
