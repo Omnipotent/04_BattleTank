@@ -15,11 +15,11 @@ class BATTLETANK_API UTankTurret : public UStaticMeshComponent
 
 public:
 	// -1 is max left movement, and +1 is max right movement
-	void Rotation(float RelativeSpeed);
+	void Rotate(float RelativeSpeed);
 
 private:
 	UPROPERTY(EditAnywhere, Category = Setup)
-	float MaxDegreesPerSecond = 5; // Sensible default
+	float MaxDegreesPerSecond = 16; // Sensible default
 	
 	
 };

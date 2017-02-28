@@ -28,7 +28,7 @@ public:
 	void SetTurretReference(UTankTurret* TurretToSet);
 
 	UPROPERTY(EditAnywhere, Category = Firing)
-	float LaunchSpeed = 100000; // TODO Find sensible default LaunchSpeed
+	float LaunchSpeed = 4000;
 
 protected:
 	UTankAimingComponent* TankAimingComponent = nullptr;
