@@ -40,15 +40,16 @@ private:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
-	UPROPERTY(EditAnywhere, Category = Firing)
-	float LaunchSpeed = 4000;
-
-	UPROPERTY(EditAnywhere, Category = Setup)
+	UPROPERTY(EditDefaultsOnly, Category = Setup) // If adding new tanks, make this EditAnywhere and allow multiple projectile types in editor.
 	TSubclassOf<AProjectile>ProjectileBlueprint; // Alternative https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/TSubclassOf/
 
-	UTankBarrel* Barrel = nullptr; // Local barrel reference for spawning projectile
-	
+	UPROPERTY(EditDefaultsOnly, Category = Firing)
+	float LaunchSpeed = 4000;
+
+	UPROPERTY(EditDefaultsOnly, Category = Firing) // If adding new tanks, make this EditAnywhere and allow different reload speeds in editor.
 	float ReloadTimeInSeconds = 3;
+
+	UTankBarrel* Barrel = nullptr; // Local barrel reference for spawning projectile
 
 	double LastFireTime = 0;
 };
