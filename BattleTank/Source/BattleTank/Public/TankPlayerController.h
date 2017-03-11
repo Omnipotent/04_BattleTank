@@ -20,9 +20,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaSeconds) override;
 
-private:
+protected:
+	UFUNCTION(BlueprintCallable, Category = "Setup")
 	ATank* GetControlledTank() const;
 
+private:
 	// Start the moving the barrel of the tank towards where
 	// the crosshair intersects with the world.
 	void AimTowardsCrosshair();
