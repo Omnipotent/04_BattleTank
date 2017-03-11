@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright Nicholas Wilkie
 
 #pragma once
 
@@ -18,7 +18,7 @@ public:
 	void Rotate(float RelativeSpeed);
 
 private:
-	UPROPERTY(EditDefaultsOnly, Category = Setup) // If adding new tanks, make this EditAnywhere and allow different turret rotation speeds in editor.
+	UPROPERTY(EditDefaultsOnly, Category = "Setup") // If adding new tanks, make this EditAnywhere and allow different turret rotation speeds in editor.
 	float MaxDegreesPerSecond = 20; // Sensible default
 	
 	

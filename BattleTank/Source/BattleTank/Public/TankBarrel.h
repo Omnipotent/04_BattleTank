@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright Nicholas Wilkie
 
 #pragma once
 
@@ -18,13 +18,13 @@ public:
 	void Elevate(float RelativeSpeed);
 	
 private:
-	UPROPERTY(EditDefaultsOnly, Category = Setup) // If adding new tanks, make this EditAnywhere to allow different barrel movement speeds in editor.
+	UPROPERTY(EditDefaultsOnly, Category = "Setup") // If adding new tanks, make this EditAnywhere to allow different barrel movement speeds in editor.
 	float MaxDegreesPerSecond = 7; // Sensible default
 
-	UPROPERTY(EditDefaultsOnly, Category = Setup)
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 	float MaxElevationDegrees = 30;
 
-	UPROPERTY(EditDefaultsOnly, Category = Setup)
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 	float MinElevationDegrees = -2;
 	
 };
