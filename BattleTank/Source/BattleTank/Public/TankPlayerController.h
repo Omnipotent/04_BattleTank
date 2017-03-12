@@ -6,8 +6,10 @@
 #include "TankPlayerController.generated.h" // MUST be the last include!
 
 class ATank;
+class UTankAimingComponent;
+
 /**
- * 
+ * The default Player Controller for all Tanks. Responsible for helping the player aim.
  */
 UCLASS()
 class BATTLETANK_API ATankPlayerController : public APlayerController
@@ -23,6 +25,9 @@ public:
 protected:
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 	ATank* GetControlledTank() const;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
+	void FoundAimingComponent(UTankAimingComponent* AimCompRef);
 
 private:
 	// Start the moving the barrel of the tank towards where
