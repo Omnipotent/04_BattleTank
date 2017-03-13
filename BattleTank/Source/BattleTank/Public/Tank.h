@@ -35,6 +35,7 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Setup") // If adding new tanks, make this EditAnywhere and allow multiple projectile types in editor.
 	TSubclassOf<AProjectile>ProjectileBlueprint; // Alternative https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/TSubclassOf/
 
+	// TODO Remove once firing is moved to aiming component
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	float LaunchSpeed = 4000;
 
