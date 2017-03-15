@@ -30,7 +30,7 @@ void UTankTrack::TickComponent(float DeltaTime, enum ELevelTick TickType, FActor
 
 void UTankTrack::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Hit text"));
+	UE_LOG(LogTemp, Warning, TEXT("Track Hitting Floor"));
 }
 
 void UTankTrack::SetThrottle(float Throttle)
