@@ -1,6 +1,7 @@
 *.VC.db
 
-# Unnecessary Extra Assets eg: */StarterContent/ or similar
+# Unnecessary Extra Assets 
+# */StarterContent/
 
 # Visual Studio 2015 user specific files
 .vs/
