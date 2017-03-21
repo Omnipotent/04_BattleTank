@@ -51,5 +51,14 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, U
 	SetRootComponent(ImpactBlast);
 	CollisionMesh->DestroyComponent();
 
-	SetLifeSpan(5);
+	UGameplayStatics::ApplyRadialDamage(
+		this,
+		ProjectileDamage,
+		GetActorLocation(),
+		ExplosionForce->Radius,	// for consistency
+		UDamageType::StaticClass(),
+		TArray<AActor*>()	// Damage all actors
+	);
+
+	SetLifeSpan(5);	// TODO Any time the particle effect time length is modified, verify that this is still an appropriate amount of time
 }
