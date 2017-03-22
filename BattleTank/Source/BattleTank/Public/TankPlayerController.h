@@ -33,6 +33,11 @@ private:
 	// Return an OUT parameter, true if hit landscape
 	bool GetSightRayHitLocation(FVector& HitLocation) const;
 
+	void SetPawn(APawn* InPawn);
+
+	UFUNCTION()
+	void OnPossedTankDeath();
+
 	UPROPERTY(EditDefaultsOnly)
 	float CrosshairXLocation = 0.5;
 

@@ -5,7 +5,7 @@
 #include "TankAIController.h"
 #include "Tank.h" // So we can implement OnDeath
 
-// Depends on movement component via pathfinding system
+// Depends on movement component via path finding system
 
 void ATankAIController::BeginPlay()
 {
@@ -27,7 +27,8 @@ void ATankAIController::SetPawn(APawn* InPawn)
 
 void ATankAIController::OnPossedTankDeath()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Received!"))
+	if (!ensure(GetPawn())) { return; }		// TODO Remove ensure if okay
+	GetPawn()->DetachFromControllerPendingDestroy();
 }
 
 // Called every frame
